@@ -4,7 +4,7 @@
 sudo apt-get update
 
 #Java JDK 11 , gcc, git, flex, bison, unzip (for unzipping .zip files)
-sudo apt install curl openjdk-11-jdk gcc git flex bison unzip zip g++ make
+sudo apt install curl openjdk-11-jdk gcc git unzip zip g++ make
 
 #Eclipse
 sudo snap install eclipse --classic
@@ -13,6 +13,9 @@ sudo snap install eclipse --classic
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install gradle 5.0
+
+#sudo apt install flex bison
+
 
 #dex2jar
 #wget -c --no-clobber https://github.com/pxb1988/dex2jar/releases/download/2.0/dex-tools-2.0.zip 
@@ -51,7 +54,7 @@ gradle eclipse -PeclipsePDE
 gradle prepDev
 
 #Unzip build
-cd buil/dist/
+cd build/dist/
 unzip *
 
 #Print location
